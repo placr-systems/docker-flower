@@ -16,8 +16,8 @@ RUN arch="$(dpkg --print-architecture)" \
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r flower && useradd -r -g flower flower
 
-RUN       pip install redis==2.10.3
-RUN       pip install flower==0.8.3
+RUN       pip install redis==2.10.5
+RUN       pip install flower==0.9.1
 
 COPY      docker-entrypoint.sh /
 
